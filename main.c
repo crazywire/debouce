@@ -38,7 +38,7 @@ ISR(INT0_vect){
 		if(button_status){
 			my_current_state = trans_lh; //current state is in transition from low to high
 			good_sample_counts = 0; //reset good sample counts
-			sampe_counts =0; //reset
+			sample_counts =0; //reset
 		}
 	}
 	
@@ -54,7 +54,7 @@ ISR(INT0_vect){
 
 ISR(TIMER0_COMPA_vect){
 	
-	if(sample_counts < tot_sample_points){
+	if(sample_counts < total_sample_points){
 		sample_counts++; //count the samples
 		//count samples from specific transition 
 		if((my_current_state == trans_hl) | (my_current_state == trans_lh)){
