@@ -89,7 +89,7 @@ int main(void)
 	DDRD = 0;
 	
 	//Decide if the switch is open or closed
-	if(PIND & (1<<PD2){
+	if(PIND & (1<<PD2)){
 		PORTB = (1<<PB0)|(1<<PB1);
 		my_current_state = high;
 	}else{
