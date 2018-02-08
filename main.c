@@ -72,7 +72,7 @@ Samples are incremented if the state is in transition
 ISR(TIMER0_COMPA_vect){
 	
 	//increment samples
-	if(sample_counts > total_sample_points){
+	if(sample_counts < total_sample_points){
 		sample_counts++; //count the samples
 		if((my_current_state == trans_hl) || (my_current_state == trans_lh)){
 			//count good samples while state is in transition
